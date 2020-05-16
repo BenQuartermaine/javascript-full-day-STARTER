@@ -1,0 +1,21 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  grid-gap: 1rem;
+}
+
+.card-movie {
+  display: flex;
+  box-shadow: 0px 0px 8px #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.image-top {
+  margin-right: 8px;
+  height: 200px;
+}
+
+.card-movie:hover {
+  box-shadow: 0px 0px 16px #ccc;
+}
