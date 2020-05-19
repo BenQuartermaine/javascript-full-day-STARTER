@@ -1,5 +1,7 @@
+// Select your list element
 const list = document.querySelector('#results');
 
+// Write insertMovies function
 const insertMovies = (data) => {
   console.log(data)
   data.Search.forEach((result) => {
@@ -16,15 +18,20 @@ const insertMovies = (data) => {
   });
 };
 
+// Write fetchMovies function
 const fetchMovies = (query) => {
   fetch(`https://www.omdbapi.com/?s=${query}&apikey=adf1f2d7`)
     .then(response => response.json())
     .then(insertMovies);
 };
 
+// Call your fetchMovies function
 fetchMovies('harry potter'); // on 1st page load
 
+// Select form element
 const form = document.querySelector('#search-form');
+
+// Add event listener to form
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   list.innerHTML = '';
