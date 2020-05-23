@@ -15,3 +15,4 @@ const movieList = [
     Poster: './movies/in-bruges.jpg'
   }
 ];
+
